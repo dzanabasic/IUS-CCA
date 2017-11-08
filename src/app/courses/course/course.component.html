@@ -1,0 +1,36 @@
+<form #courseForm="ngForm" (ngSubmit)="onSubmit(courseForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="courseService.selectedCourse.$key">
+  <div class="form-group">
+    <label>Course Code</label>
+    <input type="text" class="form-control" name="course_code" 
+    #name="ngModel"[(ngModel)]="courseService.selectedCourse.course_code"
+    placeholder="Course Code" required>
+  </div>
+  <div class="form-group">
+    <label>Course Name</label>
+    <input type="text" class="form-control" name="course_name" 
+    #name="ngModel"[(ngModel)]="courseService.selectedCourse.course_name"
+    placeholder="Course Code" required>
+  </div>
+  <div class="form-group">
+    <label>ECTS</label>
+    <input type="text" class="form-control" name="ects" 
+    #name="ngModel"[(ngModel)]="courseService.selectedCourse.ects"
+    placeholder="Course Code">
+  </div>
+  <div class="form-group">
+    <label>Course Pre-requisites</label>
+    <input type="text" class="form-control" name="pre_requistes" 
+    #name="ngModel"[(ngModel)]="courseService.selectedCourse.pre_requistes"
+    placeholder="Course Code">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-default" ><i class="fa fa-floppy-o"></i>Submit</button>
+ 
+    <button type="button" class="btn btn-default"><i class="fa fa-trash" 
+      *ngIf="courseService.selectedCourse.$key!=null" (click)="onDelete(courseForm)"
+    ></i>Delete</button>
+    <button type="button" class="btn btn-default" (click)="resetForm()"><i class="fa fa-repeat"></i>Reset</button>
+    
+  </div>
+</form>

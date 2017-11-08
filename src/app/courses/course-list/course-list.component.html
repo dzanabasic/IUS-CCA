@@ -1,0 +1,6 @@
+<ul class="list-group hover">
+  <li class="list-group-item" *ngFor="let course of courselist" (click)="onItemClick(course)">
+    {{course.course_code}}-{{course.course_name}}
+  </li>
+
+</ul>
