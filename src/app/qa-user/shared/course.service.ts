@@ -9,7 +9,9 @@ export class CourseService {
   courseList: AngularFireList<any>;
   selectedCourse : Course=new Course();
   
-  constructor(private firebase: AngularFireDatabase) { }
+  constructor(private firebase: AngularFireDatabase) { 
+    this.courseList=this.firebase.list('courses');
+  }
   
   getData(){
     this.courseList=this.firebase.list('courses');
@@ -27,7 +29,6 @@ export class CourseService {
 
   }
   updateCourse(crs :Course){
-    
     this.courseList.update(crs.$key,{
       course_code:crs.course_code,
       course_name:crs.course_name,

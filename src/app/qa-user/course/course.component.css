@@ -1,0 +1,40 @@
+.buttons {
+    text-align: center;    
+  }
+
+.btn_add {
+    width: 250px;
+    border-radius: 10px;
+    font-family: Arial;
+    color: #000000;
+    font-size: 20px;
+    background: #b3ecff;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+.btn_up_re {
+    width: 250px;    
+    border-radius: 10px;
+    font-family: Arial;
+    color: #000000;
+    font-size: 20px;
+    background: #ffff;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+#course_title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    margin: 0 auto;
+    width: 250px;
+    margin-top: 50px;    
+}
+
+
+
+

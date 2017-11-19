@@ -1,25 +1,28 @@
 <div class="wrapper">
 		<div *ngIf="!authService.isUserEmailLoggedIn">
 				<div style="width: 350px;" *ngIf="isNewUser">
-			 
-					<p *ngIf="errorMessage.length > 0" class="text-danger">
-						{{errorMessage}}</p>
-			 
-					<p *ngIf="error.message.length > 0" class="text-danger">
-						{{error.message}}</p>
+					<p *ngIf="errorMessage.length > 0" class="text-danger">{{errorMessage}}</p>
+					<p *ngIf="error.message.length > 0" class="text-danger">{{error.message}}</p>
+				</div>
+		</div>
+
 	<form class="login" (ngSubmit)="onLoginEmail()">
 	  <p class="title">Sign In</p>
-	  <p class="intro">Welcome to IUS Course Coordination System! <br> Use your e-mail and password to sign in. <br><br> </p>
+		<p class="intro">Welcome to IUS Course Coordination System! <br> Use your e-mail and password to sign in. <br><br> </p>
+		
 	  <input type="text" placeholder="E-mail" id="email" name="email" required [(ngModel)]="email" autofocus/>
 	  <i class="fa fa-user"></i>
 	  <input type="password" placeholder="Password" id="password" name="password" required [(ngModel)]="password"/>
 	  <i class="fa fa-key"></i>
 	  <a href="#" id="guest_link">Sign in as guest</a>
 	  <br>
-	  <a href="#" id="forgot_pass">Forgot your password?</a>	  
+		<a href="#" id="forgot_pass">Forgot your password?</a>	 
+		 
 	  <button  type="submit">
 		<i class="spinner"></i>
 		<span class="state">Log in</span>
-	  </button>
+		</button>
+		
 	</form>
+
   </div>

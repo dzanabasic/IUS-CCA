@@ -10,9 +10,11 @@ import {AuthService} from './auth/auth.service';
 import {AppRoutingModule} from './auth/app-routing.module';
 
 import { AppComponent } from './app.component';
-import { CoursesComponent } from './courses/courses.component';
-import { CourseComponent } from './courses/course/course.component';
-import { CourseListComponent } from './courses/course-list/course-list.component';
+
+import { CoursesComponent } from './qa-user/courses.component';
+import { CourseComponent } from './qa-user/course/course.component';
+import { CourseService } from './qa-user/shared/course.service';
+import { CourseListComponent } from './qa-user/course-list/course-list.component';
 import { environment } from '../environments/environment';
 import { UserInfoComponent } from './auth/user-info/user-info.component';
 import { UserLoginComponent } from './auth/user-login/user-login.component';
@@ -34,7 +36,7 @@ import { UserLoginComponent } from './auth/user-login/user-login.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

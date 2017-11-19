@@ -9,6 +9,7 @@ import {Course} from '../shared/course.model'
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.css'],
   //encapsulation: ViewEncapsulation.None
+  providers: [CourseService]
 })
 export class CourseComponent implements OnInit {
 
